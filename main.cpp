@@ -27,7 +27,7 @@ int detect_codes(zbar::ImageScanner &scanner, cv::Mat &frame) {
 #endif
 
   cv::Mat grey;
-  cv::cvtColor(frame, grey, CV_BGR2GRAY);
+  cv::cvtColor(frame, grey, cv::COLOR_BGR2GRAY);
 
   zbar::Image image(grey.cols,              // width
                     grey.rows,              // height
