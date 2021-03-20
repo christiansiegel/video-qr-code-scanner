@@ -7,7 +7,16 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
-      - name: Setup OpenCV
+      - name: Setup ZBar v0.10
+        run: |
+          cd $RUNNER_TEMP
+          wget -O zbar-0.10.tar.bz2 https://sourceforge.net/projects/zbar/files/zbar/0.10/zbar-0.10.tar.bz2/download
+          tar xf zbar-0.10.tar.bz2
+          cd zbar-0.10
+          CFLAGS="" ./configure --prefix=/usr/local --without-gtk --without-python --without-qt --disable-video
+          make
+          sudo make install
+      - name: Setup OpenCV v3.4.0
         uses: Dovyski/setup-opencv-action@v1
         with:
           opencv-version: '3.4.0'
