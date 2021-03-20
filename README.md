@@ -40,12 +40,11 @@ All codes detected in a video frame are printed, e.g.:
 
 ## FAQ
 ### Install ZBar
-```
-wget http://downloads.sourceforge.net/zbar/0.10/zbar-0.10.tar.bz2
-tar xf zbar-0.10.tar.bz2 
+```bash
+wget -O zbar-0.10.tar.bz2  https://sourceforge.net/projects/zbar/files/zbar/0.10/zbar-0.10.tar.bz2/download
+tar xf zbar-0.10.tar.bz2
 cd zbar-0.10
-export CFLAGS=""
-./configure --prefix=/usr/local --without-gtk --without-python --disable-video
+CFLAGS="" ./configure --prefix=/usr/local --without-gtk --without-python --without-qt --disable-video
 make
 sudo make install
 ```
