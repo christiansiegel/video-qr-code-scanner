@@ -78,7 +78,7 @@ int main() {
     cv::imshow("video", frame);
 #endif
 
-    if (cv::waitKey(30) != 0xff) break;
+    if (cv::waitKey(30) != -1) break;
   }
 
   return 0;
