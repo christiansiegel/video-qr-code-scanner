@@ -6,13 +6,21 @@ Scan QR Codes from video stream.
 * [ZBar bar code reader](http://zbar.sourceforge.net/) (tested with 0.10)
 
 ## Build
-```
+```bash
+# Clone repository
 git clone https://github.com/christiansiegel/video-qr-code-scanner.git
 cd video-qr-code-scanner
-mkdir build
-cd build
+
+# Create build directory
+mkdir build && cd build
+
+# Configure
 cmake ..
+
+# Build
 make
+
+# Run
 ./video-qr-code-scanner
 ```
 
@@ -27,7 +35,7 @@ All codes detected in a video frame are printed, e.g.:
     >> "http://en.m.wikipedia.org/"
     >> "http://www.shopify.com/"
     >> "Hello :)"
-    >> http://www.qrstuff.com/"
+    >> "http://www.qrstuff.com/"
 ```
 
 ## FAQ
