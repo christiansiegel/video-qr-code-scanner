@@ -54,9 +54,16 @@ int detect_codes(zbar::ImageScanner &scanner, cv::Mat &frame) {
   return n;
 }
 
-int main() {
+int main(int argc, char* argv[]) {
 
-  cv::VideoCapture capture(0);  // video camera #0
+  if (argc < 2)
+  {
+    std::cerr << "input argument is missing" << std::endl;
+    return 1;
+  }
+  
+  const char* input = argv[1];
+  cv::VideoCapture capture(input);
   if (!capture.isOpened()) return -1;
 
   zbar::ImageScanner scanner;
