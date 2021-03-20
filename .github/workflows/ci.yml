@@ -1,0 +1,18 @@
+name: CI
+on: push
+jobs:
+  ci:
+    name: CI
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+      - name: Setup OpenCV
+        uses: Dovyski/setup-opencv-action@v1
+        with:
+          opencv-version: '3.4.0'
+      - name: Build
+        run: |
+          mkdir -p build && cd build
+          cmake ..
+          make
