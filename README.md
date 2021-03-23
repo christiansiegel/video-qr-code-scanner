@@ -1,8 +1,9 @@
 # Video QR Code Scanner
+
 Scan QR Codes from video stream.
 
 ## Dependencies
-* [OpenCV](http://opencv.org/) (tested with 3.2.0)
+* [OpenCV](http://opencv.org/) (tested with 3.2.0 and 4.5.0)
 * [ZBar bar code reader](http://zbar.sourceforge.net/) (tested with 0.10)
 
 ## Build
