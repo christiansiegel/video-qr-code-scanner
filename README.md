@@ -1,3 +1,5 @@
+![ci-workflow-badge](https://github.com/christiansiegel/video-qr-code-scanner/actions/workflows/ci.yml/badge.svg)
+
 # Video QR Code Scanner
 
 Scan QR Codes from video stream.
