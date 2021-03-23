@@ -1,4 +1,4 @@
-![ci-workflow-badge](https://github.com/christiansiegel/video-qr-code-scanner/actions/workflows/ci.yml/badge.svg)
+[![ci-workflow-status](https://github.com/christiansiegel/video-qr-code-scanner/actions/workflows/ci.yml/badge.svg)](https://github.com/christiansiegel/video-qr-code-scanner/actions/workflows/ci.yml) 
 
 # Video QR Code Scanner
 
